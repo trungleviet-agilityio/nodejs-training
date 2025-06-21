@@ -1,24 +1,20 @@
 module.exports = {
   preset: 'ts-jest',
   testEnvironment: 'node',
-  roots: ['<rootDir>/src'],
+  roots: ['<rootDir>/typescripts-learning'],
   testMatch: [
-    '**/__tests__/**/*.ts',
+    '**/tests/**/*.test.ts',
     '**/?(*.)+(spec|test).ts'
   ],
   transform: {
     '^.+\\.ts$': 'ts-jest',
   },
   collectCoverageFrom: [
-    'src/**/*.ts',
-    '!src/**/*.d.ts',
-    '!src/**/*.test.ts',
-    '!src/**/*.spec.ts',
+    'typescripts-learning/src/**/*.ts',
+    '!typescripts-learning/src/**/*.d.ts',
+    '!typescripts-learning/src/**/*.test.ts',
+    '!typescripts-learning/src/**/*.spec.ts',
   ],
   coverageDirectory: 'coverage',
   coverageReporters: ['text', 'lcov', 'html'],
-  moduleNameMapping: {
-    '^@/(.*)$': '<rootDir>/src/$1',
-  },
-  setupFilesAfterEnv: ['<rootDir>/src/test/setup.ts'],
 }; 

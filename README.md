@@ -23,6 +23,23 @@ This repository is dedicated to learning Node.js and related technologies. The p
 - Node.js (v18 or higher recommended)
 - npm or yarn package manager
 - Git
+- [nvm](https://github.com/nvm-sh/nvm) (Node Version Manager) for managing Node.js versions per project
+
+### Node.js Version Management (like Python's pyenv)
+This project uses [nvm](https://github.com/nvm-sh/nvm) to manage Node.js versions per project. The required version is specified in the `.nvmrc` file.
+
+```bash
+# Install nvm (if not already)
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+
+# Install the required Node.js version
+nvm install
+
+# Use the required Node.js version
+nvm use
+```
+
+You can add `nvm use` to your shell startup or run it each time you start working on the project.
 
 ### Installation
 ```bash
@@ -31,6 +48,9 @@ git clone git@github.com:trungleviet-agilityio/nodejs-training.git
 
 # Navigate to the project
 cd nodejs-training
+
+# Activate the correct Node.js version
+nvm use
 
 # Install dependencies (when available)
 npm install
@@ -61,6 +81,22 @@ To save disk space and manage packages efficiently:
 2. **Clean up regularly**: Remove unused packages and clear caches
 3. **Use workspaces**: Organize related projects in monorepo structure
 4. **Docker containers**: Use containers for isolated development environments
+
+### Pre-commit Hooks
+This project uses [Husky](https://typicode.github.io/husky/) to run pre-commit checks automatically:
+
+```bash
+# Pre-commit checks run automatically on every commit:
+# - TypeScript type checking
+# - ESLint code linting
+# - Jest unit tests
+
+# To run checks manually:
+npm run pre-commit
+
+# To skip pre-commit hooks (use with caution):
+git commit --no-verify -m "your message"
+```
 
 ### Package Management Commands
 ```bash

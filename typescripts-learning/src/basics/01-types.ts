@@ -34,7 +34,11 @@ function greet(name: string): string {
 
 // Function with optional parameters
 function createUser(name: string, age?: number): { name: string; age?: number } {
-  return { name, age };
+  const user: { name: string; age?: number } = { name };
+  if (age !== undefined) {
+    user.age = age;
+  }
+  return user;
 }
 
 // 6. Type Aliases
@@ -105,4 +109,12 @@ export {
   coordinates,
   favoriteColor,
   rgb,
+  inferredString,
+  inferredNumber,
+  inferredArray,
+  id,
+  anyValue,
+  unknownValue,
+  logMessage,
+  throwError,
 }; 

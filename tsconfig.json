@@ -4,7 +4,7 @@
     "module": "commonjs",
     "lib": ["ES2022"],
     "outDir": "./dist",
-    "rootDir": "./src",
+    "rootDir": "./",
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
@@ -29,11 +29,11 @@
     "moduleResolution": "node",
     "baseUrl": "./",
     "paths": {
-      "@/*": ["src/*"]
+      "@/*": ["typescripts-learning/src/*"]
     }
   },
   "include": [
-    "src/**/*"
+    "typescripts-learning/src/**/*"
   ],
   "exclude": [
     "node_modules",
