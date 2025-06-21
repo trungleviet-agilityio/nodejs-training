@@ -1,14 +1,1 @@
-#!/usr/bin/env sh
-. "$(dirname -- "$0")/_/husky.sh"
-
-echo "🔍 Running pre-commit checks..."
-
-# Run TypeScript type checking
-echo "📝 Checking TypeScript types..."
-npm run type-check || exit 1
-
-# Run tests
-echo "🧪 Running tests..."
-npm test || exit 1
-
-echo "✅ All pre-commit checks passed!"
+npm run type-check && npm run lint && npm test
