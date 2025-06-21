@@ -1,5 +1,7 @@
 # Node.js Training Repository
 
+![Quality Checks](https://github.com/trungleviet-agilityio/nodejs-training/workflows/Quality%20Checks/badge.svg)
+
 This repository is dedicated to learning Node.js and related technologies. The project is organized into different branches for different learning paths and topics.
 
 ## ⚡ Quick Reference (Daily Commands)
