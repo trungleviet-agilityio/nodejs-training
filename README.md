@@ -6,7 +6,7 @@ This repository is dedicated to learning Node.js and related technologies. The p
 
 ### Branches
 - **`main`** - Main branch with project overview and documentation
-- **`dev`** - Development branch for active development work
+- **`develop`** - Development branch for active development work
 - **`learning/typescripts`** - TypeScript learning materials and exercises
 
 ### Learning Paths
@@ -75,6 +75,22 @@ npm outdated
 
 # Update packages selectively
 npm update <package-name>
+```
+
+### 🧹 Disk Space Management
+For laptops with limited storage, use the cleanup script:
+
+```bash
+# Run the cleanup script to free up disk space
+./scripts/cleanup.sh
+
+# This will remove:
+# - node_modules directories
+# - package-lock.json files
+# - build artifacts (dist, build)
+# - npm cache
+# - coverage reports
+# - log files
 ```
 
 ## 📝 Contributing
