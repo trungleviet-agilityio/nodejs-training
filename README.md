@@ -6,10 +6,10 @@ This repository is dedicated to learning Node.js and related technologies. The p
 
 ```bash
 # 🚀 Start your day
-cd /home/trungcy/Desktop/workspace/github/agilityio/nodejs-training
-nvm use
-git checkout learning/typescripts
-git pull origin learning/typescripts
+cd nodejs-training                    # Navigate to project directory
+nvm use                              # Activate Node.js version
+git checkout learning/typescripts    # Switch to learning branch
+git pull origin learning/typescripts # Pull latest changes
 
 # 🛠️ Development
 npm test                    # Run tests
@@ -86,7 +86,7 @@ npm install
 
 ```bash
 # 1. Navigate to your project
-cd /home/trungcy/Desktop/workspace/github/agilityio/nodejs-training
+cd nodejs-training
 
 # 2. Activate the correct Node.js version (IMPORTANT!)
 nvm use
