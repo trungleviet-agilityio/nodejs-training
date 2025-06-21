@@ -2,6 +2,30 @@
 
 This repository is dedicated to learning Node.js and related technologies. The project is organized into different branches for different learning paths and topics.
 
+## ⚡ Quick Reference (Daily Commands)
+
+```bash
+# 🚀 Start your day
+cd /home/trungcy/Desktop/workspace/github/agilityio/nodejs-training
+nvm use
+git checkout learning/typescripts
+git pull origin learning/typescripts
+
+# 🛠️ Development
+npm test                    # Run tests
+npm run type-check         # Type checking
+npm run dev                # Run examples
+npm run build              # Build project
+
+# 💾 Save work
+git add .
+git commit -m "feat: your message"
+git push origin learning/typescripts
+
+# 🧹 Cleanup (when needed)
+./scripts/cleanup.sh
+```
+
 ## 🏗️ Repository Structure
 
 ### Branches
@@ -56,6 +80,71 @@ nvm use
 npm install
 ```
 
+## 📅 Daily Workflow
+
+### 🎯 Starting Your Day (Every Day)
+
+```bash
+# 1. Navigate to your project
+cd /home/trungcy/Desktop/workspace/github/agilityio/nodejs-training
+
+# 2. Activate the correct Node.js version (IMPORTANT!)
+nvm use
+
+# 3. Switch to the learning branch
+git checkout learning/typescripts
+
+# 4. Pull latest changes
+git pull origin learning/typescripts
+
+# 5. Verify your environment
+node --version  # Should show v18.x.x
+npm --version   # Should show npm version
+```
+
+### 🛠️ During Development
+
+```bash
+# Run TypeScript examples
+npm run dev typescripts-learning/src/basics/01-types.ts
+
+# Run tests
+npm test
+
+# Type checking
+npm run type-check
+
+# Linting (when fixed)
+npm run lint
+
+# Build the project
+npm run build
+```
+
+### 💾 Saving Your Work
+
+```bash
+# Add your changes
+git add .
+
+# Commit with descriptive message
+git commit -m "feat(typescript): add new example for interfaces"
+
+# Push to remote
+git push origin learning/typescripts
+```
+
+### 🧹 End of Day Cleanup
+
+```bash
+# Clean up disk space (if needed)
+./scripts/cleanup.sh
+
+# Or manually clean specific items
+npm cache clean --force
+rm -rf node_modules package-lock.json
+```
+
 ## 📚 Learning Modules
 
 ### TypeScript Learning (`learning/typescripts` branch)
@@ -87,8 +176,7 @@ This project uses [Husky](https://typicode.github.io/husky/) to run pre-commit c
 
 ```bash
 # Pre-commit checks run automatically on every commit:
-# - TypeScript type checking
-# - ESLint code linting
+# - TypeScript type checking (tsc --noEmit)
 # - Jest unit tests
 
 # To run checks manually:
@@ -97,6 +185,8 @@ npm run pre-commit
 # To skip pre-commit hooks (use with caution):
 git commit --no-verify -m "your message"
 ```
+
+**Note**: ESLint is configured but temporarily disabled in pre-commit due to configuration issues. You can run it manually with `npm run lint`.
 
 ### Package Management Commands
 ```bash
